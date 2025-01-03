@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import Image from 'next/image'
 import {
     Select,
     SelectContent,
@@ -14,11 +15,12 @@ import {
 import { Label } from '@/components/ui/label'
 
 const CATEGORIES = [
-    { name: 'Web Development', slug: 'web-dev' },
-    { name: 'Mobile Development', slug: 'mobile-dev' },
-    { name: 'Artificial Intelligence', slug: 'ai' },
-    { name: 'Cloud Computing', slug: 'cloud' },
+    { name: 'Technology', slug: 'tech' },
+    { name: 'Internet', slug: 'internet' },
+    { name: 'Quantum Computing', slug: 'quantum-computing' },
+    { name: 'Metaverse', slug: 'metaverse' },
     { name: 'Cybersecurity', slug: 'security' },
+    { name: 'Fiance', slug: 'fiance' },
 ]
 
 export default function CreateBlog() {
@@ -105,7 +107,7 @@ export default function CreateBlog() {
                         />
                         {imagePreview && (
                             <div className="mt-4">
-                                <img src={imagePreview} alt="Preview" className="max-w-full h-auto" />
+                                <Image src={imagePreview} alt="Preview" className="max-w-full h-auto" />
                             </div>
                         )}
                     </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -9,11 +10,12 @@ import {
 import { ChevronDown } from 'lucide-react'
 
 const CATEGORIES = [
-    { name: 'Web Development', slug: 'web-dev' },
-    { name: 'Mobile Development', slug: 'mobile-dev' },
-    { name: 'Artificial Intelligence', slug: 'ai' },
-    { name: 'Cloud Computing', slug: 'cloud' },
+    { name: 'Technology', slug: 'tech' },
+    { name: 'Internet', slug: 'internet' },
+    { name: 'Quantum Computing', slug: 'quantum-computing' },
+    { name: 'Metaverse', slug: 'metaverse' },
     { name: 'Cybersecurity', slug: 'security' },
+    { name: 'Fiance', slug: 'fiance' },
 ]
 
 export function Navigation() {
@@ -21,7 +23,7 @@ export function Navigation() {
         <nav className="border-b">
             <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
                 <Link href="/" className="text-xl font-bold">
-                    Blog
+                    Tech Blog
                 </Link>
                 <div className="flex flex-wrap justify-center md:justify-start items-center space-x-4 md:space-x-6 mt-4 md:mt-0">
                     <Link href="/" className="hover:text-gray-600">Home</Link>
@@ -51,6 +53,7 @@ export function Navigation() {
                     <Link href="/signup">
                         <Button>Sign Up</Button>
                     </Link>
+                   
                 </div>
             </div>
         </nav>

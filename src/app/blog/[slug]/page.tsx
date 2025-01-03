@@ -1,28 +1,19 @@
-import { Comments } from '@/components/comments'
+import { blogPosts } from '@/lib/blogData'
 import Image from 'next/image'
 import { formatDate } from '@/lib/utils'
+import { notFound } from 'next/navigation'
+import { Comments } from '@/components/comments'
 
-// This is a mock function to fetch blog data. In a real application, you would fetch this data from your API or database.
 async function getBlogPost(slug: string) {
-    // Simulating an API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-
-    return {
-        title: 'Tips for Office Design for a Productive Workplace',
-        content: 'Learn how to create an office environment that boosts productivity and employee satisfaction...',
-        image: '/ai.jpg?height=400&width=800',
-        author: 'Ali Asghar',
-        date: '2023-06-01',
-        category: 'Web Development',
-        
-        
-    }
-    
+    return blogPosts.find((post) => post.slug === slug) || null
 }
-
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
     const post = await getBlogPost(params.slug)
+
+    if (!post) {
+        notFound()
+    }
 
     return (
         <article className="container mx-auto px-4 py-12">
@@ -47,12 +38,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 )}
                 <div className="prose prose-lg max-w-none mb-12">
                     <p>{post.content}</p>
-                    {/* Add more content sections as needed */}
                 </div>
-                
                 <Comments postSlug={params.slug} />
             </div>
         </article>
     )
 }
-

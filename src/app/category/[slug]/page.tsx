@@ -3,11 +3,13 @@ import { BlogGrid } from '@/components/blog-grid'
 export default function CategoryPage({ params }: { params: { slug: string } }) {
     const getCategoryName = (slug: string) => {
         const categories = {
-            'web-dev': 'Web Development',
-            'mobile-dev': 'Mobile Development',
-            'ai': 'Artificial Intelligence',
-            'cloud': 'Cloud Computing',
+            'tech': 'Technolgy',
+            'quantum-computing': 'Quantum Computing',
+            'internet': 'Internet',
+            'fiance': 'Finace',
             'security': 'Cybersecurity',
+            'metaverse': 'Metaverse',
+
         }
         return categories[slug as keyof typeof categories] || 'Unknown Category'
     }

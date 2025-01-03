@@ -2,11 +2,12 @@ import Link from 'next/link'
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 
 const CATEGORIES = [
-    { name: 'Web Development', slug: 'web-dev' },
-    { name: 'Mobile Development', slug: 'mobile-dev' },
-    { name: 'Artificial Intelligence', slug: 'ai' },
-    { name: 'Cloud Computing', slug: 'cloud' },
+    { name: 'Technology', slug: 'tech' },
+    { name: 'Internet', slug: 'internet' },
+    { name: 'Quantum Computing', slug: 'quantum-computing' },
+    { name: 'Metaverse', slug: 'metaverse' },
     { name: 'Cybersecurity', slug: 'security' },
+    { name: 'Fiance', slug: 'fiance' },
 ]
 
 export function Footer() {
@@ -61,7 +62,7 @@ export function Footer() {
                 </div>
                 <div className="mt-8 pt-8 border-t border-gray-800 text-center">
                     <p className="text-sm text-gray-400">
-                        © {new Date().getFullYear()} Your Blog Name. All rights reserved.
+                        © {new Date().getFullYear()} Your Blog Name Ali Asghar | All rights reserved.
                     </p>
                 </div>
             </div>

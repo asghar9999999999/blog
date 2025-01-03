@@ -24,8 +24,7 @@ export function Hero() {
             </div>
             <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
                 <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold max-w-3xl mb-4 md:mb-6">
-                    Effective Office Culture: Building a Strong Corporate Foundation
-                </h1>
+Explore The Technolgy World                </h1>
                 <div className="flex space-x-4">
                     <Button size="lg" className="bg-white text-black hover:bg-gray-100">
                         Learn More
